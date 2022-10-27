@@ -29,10 +29,11 @@ jobs:
 
     - name: run spider
       run: |
+        echo $(date "+%Y-%m-%d %H:%M:%S") > update_time.txt
         python main.py
     
     - name: commit
-      run: |
+      run: | 
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
