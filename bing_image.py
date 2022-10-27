@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-@File    : spider.py
+@File    : bing_image.py
 @Date    : 2022-10-26
 @Author  : Peng Shiyu
 """
 import json
 import re
+from datetime import datetime
 
 import requests
 
@@ -28,6 +29,7 @@ def get_bing_image():
     image_content = data['MediaContents'][0]['ImageContent']
 
     return {
+        'date': datetime.now().strftime('%Y-%m-%d'),
         'headline': image_content['Headline'],
         'title': image_content['Title'],
         'description': image_content['Description'],
