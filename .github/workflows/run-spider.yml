@@ -4,11 +4,12 @@
 name: Python application
 
 on:
+  schedule:
+    - cron: '30 * * * *'
+
   push:
     branches: [ "main" ]
 
-  schedule:
-    - cron: '10 * * * *'
 
 jobs:
   build:
