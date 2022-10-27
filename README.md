@@ -1,16 +1,32 @@
 # wallpaper-database
 
-在线预览：[https://mouday.github.io/wallpaper](https://mouday.github.io/wallpaper)
 
 微软必应首页每日一图接口: [https://cn.bing.com/](https://cn.bing.com/)
 
-接口地址：https://mouday.github.io/wallpaper-database/
+在线预览：[https://mouday.github.io/wallpaper](https://mouday.github.io/wallpaper)
 
-数据缓存开始时间: 2022/10/27
+> 数据缓存开始时间: 2022/10/27
+
+## 接口
+
+接口地址：
+```
+https://mouday.github.io/wallpaper-database/
+```
 
 请求方式：
 
+```
 https://mouday.github.io/wallpaper-database/<year>/<month>/<day>.json
+```
+
+参数说明
+
+| 参数 | 类型 | 说明 | 
+| - | - | - | 
+| year | str | 4位年份, 例如：2022 | 
+| month | str | 2位月份, 例如：02、12 | 
+| day | str | 2位日期, 例如：02、25 | 
 
 例如
 
