@@ -7,6 +7,7 @@
 import json
 import re
 from datetime import datetime
+from urllib.parse import urljoin
 
 import requests
 
@@ -33,7 +34,7 @@ def get_bing_image():
         'headline': image_content['Headline'],
         'title': image_content['Title'],
         'description': image_content['Description'],
-        'image_url': image_content['Image']['Url'],
+        'image_url': urljoin(url, image_content['Image']['Url']),
         'main_text': image_content['QuickFact']['MainText']
     }
 
