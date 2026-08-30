@@ -13,6 +13,7 @@ import bing_image
 
 def main():
     data = bing_image.get_bing_image()
+    print(data)
     date = datetime.strptime(data.get('date'), '%Y-%m-%d')
 
     dirname = date.strftime("%Y/%m")
