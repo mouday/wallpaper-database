@@ -22,7 +22,7 @@ def get_bing_image():
     res = requests.get(url, headers=headers)
     res.encoding = res.apparent_encoding
 
-    ret = re.search("var _model =(\{.*?\});", res.text)
+    ret = re.search(r"var _model =(\{.*?\});", res.text)
     if not ret:
         return
 
