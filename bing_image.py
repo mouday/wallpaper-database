@@ -24,6 +24,7 @@ def get_bing_image():
 
     ret = re.search(r"var _model =(\{.*?\});", res.text)
     if not ret:
+        print(res.text)
         return
 
     data = json.loads(ret.group(1))
